@@ -23,7 +23,7 @@
   },
   "scripts": {
     "compile": "rollup -c",
-    "lint": "eslint rollup.config.js src",
+    "lint": "eslint rollup.config.js src test",
     "test": "nyc ava"
   },
   "repository": {

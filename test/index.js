@@ -20,5 +20,5 @@ b {
 });
 
 test('sass should return a function', async t => {
-  t.is(typeof sass(), 'function')
+  t.is(typeof sass(), 'function');
 });
