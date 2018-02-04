@@ -50,6 +50,9 @@
       "import/core-modules": [
         "node-sass"
       ]
+    },
+    "rules": {
+      "compat/compat": "off"
     }
   },
   "babel": {
