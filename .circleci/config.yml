@@ -1,0 +1,66 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-npm-deps-{{ checksum "package-lock.json" }}
+      - run:
+          name: Installing npm dependencies
+          command: npm install
+      - run:
+          name: Resetting package-lock changes
+          command: git checkout -- package-lock.json
+      - save_cache:
+          key: v1-npm-deps-{{ checksum "package-lock.json" }}
+          paths:
+            - node_modules
+
+      # Code Quality checks
+      # TODO: Lint commit message
+      # with git log --format=%B -n 1 $CIRCLE_SHA1 | npx commitlint
+
+      # Build
+      - run:
+          name: Transpiling source code
+          command: npm run compile
+
+      # Test
+      - run:
+          name: Linting source files
+          command: npm run lint -- --format junit --output-file ~/reports/eslint.xml
+          when: always
+      - run:
+          name: Running tests
+          command: npm run -s test -- --tap | npx tap-xunit > ~/reports/ava.xml
+          when: always
+      - run:
+          name: Report test coverage
+          command: |
+            npx nyc report --reporter=text-lcov > coverage.lcov
+            npx codecov
+          when: always
+
+      # Store Results
+      - store_test_results:
+          path: ~/reports
+          when: always
+      - store_artifacts:
+          path: ~/reports
+          when: always
+
+      # Deployment
+      - add_ssh_keys
+      - deploy:
+          name: Deploy changes
+          command: |
+            echo "Setting up git user"
+            git config --global user.email circleci@circleci && git config --global user.name CircleCI && git remote --v
+
+            echo "Logging in to npm"
+            echo "$NPM_TOKEN" > ../.npmrc
+
+            npx bump-version release --gh-token $RELEASE_GITHUB_TOKEN

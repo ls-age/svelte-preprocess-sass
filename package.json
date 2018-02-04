@@ -1,0 +1,81 @@
+{
+  "name": "svelte-preprocess-sass",
+  "version": "0.0.0",
+  "description": "Svelte preprocessor for sass",
+  "main": "out/index.js",
+  "module": "out/module.js",
+  "dependencies": {
+    "svelte-preprocess-filter": "^1.0.0"
+  },
+  "devDependencies": {
+    "@ls-age/babel-preset": "^0.4.0",
+    "@ls-age/bump-version": "^0.1.2",
+    "@ls-age/eslint-config": "^0.8.0",
+    "ava": "^0.24.0",
+    "babel-core": "^6.26.0",
+    "codecov": "^3.0.0",
+    "eslint": "^4.14.0",
+    "node-sass": "^4.7.2",
+    "nyc": "^11.4.1",
+    "rollup": "^0.54.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
+  "scripts": {
+    "compile": "rollup -c",
+    "lint": "eslint rollup.config.js src",
+    "test": "nyc ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ls-age/svelte-preprocess-sass.git"
+  },
+  "keywords": [
+    "svelte",
+    "preprocess",
+    "sass"
+  ],
+  "author": "Lukas Hechenberger <npm@ls-age.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ls-age/svelte-preprocess-sass/issues"
+  },
+  "homepage": "https://github.com/ls-age/svelte-preprocess-sass#readme",
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "extends": "@ls-age",
+    "settings": {
+      "import/core-modules": [
+        "node-sass"
+      ]
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "@ls-age/babel-preset",
+        {
+          "modules": false
+        }
+      ]
+    ],
+    "env": {
+      "test": {
+        "presets": [
+          "@ls-age/babel-preset"
+        ],
+        "sourceMaps": "inline"
+      }
+    }
+  },
+  "ava": {
+    "require": [
+      "babel-core/register"
+    ]
+  },
+  "directories": {
+    "test": "test"
+  }
+}
