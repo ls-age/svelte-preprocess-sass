@@ -22,3 +22,18 @@ b {
 test('sass should return a function', async t => {
   t.is(typeof sass(), 'function');
 });
+
+test('should append `data` passed', async t => {
+  const result = await preprocessSass({
+    data: '$color: red;',
+  }, {}, {
+    attributes: { lang: 'sass' },
+    filename: './src/components/App.html',
+    content: `b {
+  color: $color
+}`,
+  });
+  t.is(result.code, `b {
+  color: red; }
+`);
+});
