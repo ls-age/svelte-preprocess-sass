@@ -13,7 +13,7 @@
     "@ls-age/eslint-config": "0.8.0",
     "ava": "0.25.0",
     "babel-core": "6.26.3",
-    "codecov": "3.0.2",
+    "codecov": "3.3.0",
     "eslint": "4.19.1",
     "node-sass": "4.9.0",
     "nyc": "12.0.2",
