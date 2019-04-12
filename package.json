@@ -11,7 +11,7 @@
     "@ls-age/babel-preset": "0.4.0",
     "@ls-age/bump-version": "0.2.0",
     "@ls-age/eslint-config": "0.8.0",
-    "ava": "0.25.0",
+    "ava": "1.4.1",
     "babel-core": "6.26.3",
     "codecov": "3.3.0",
     "eslint": "5.16.0",
