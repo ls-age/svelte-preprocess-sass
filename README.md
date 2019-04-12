@@ -2,7 +2,6 @@
 
 [![CircleCI](https://circleci.com/gh/ls-age/svelte-preprocess-sass.svg?style=svg)](https://circleci.com/gh/ls-age/svelte-preprocess-sass)
 [![codecov](https://codecov.io/gh/ls-age/svelte-preprocess-sass/branch/master/graph/badge.svg)](https://codecov.io/gh/ls-age/svelte-preprocess-sass)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ls-age/svelte-preprocess-sass.svg)](https://greenkeeper.io/)
 
 > Svelte preprocessor for [sass](http://sass-lang.com)
 
