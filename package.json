@@ -8,18 +8,18 @@
     "svelte-preprocess-filter": "^1.0.0"
   },
   "devDependencies": {
-    "@ls-age/babel-preset": "^0.4.0",
-    "@ls-age/bump-version": "^0.1.2",
-    "@ls-age/eslint-config": "^0.8.0",
-    "ava": "^0.25.0",
-    "babel-core": "^6.26.3",
-    "codecov": "^3.0.2",
-    "eslint": "^4.19.1",
-    "node-sass": "^4.9.0",
-    "nyc": "^12.0.2",
-    "rollup": "^0.60.0",
-    "rollup-plugin-babel": "^3.0.3",
-    "rollup-plugin-node-resolve": "^3.0.0"
+    "@ls-age/babel-preset": "0.4.0",
+    "@ls-age/bump-version": "0.1.2",
+    "@ls-age/eslint-config": "0.8.0",
+    "ava": "0.25.0",
+    "babel-core": "6.26.3",
+    "codecov": "3.0.2",
+    "eslint": "4.19.1",
+    "node-sass": "4.9.0",
+    "nyc": "12.0.2",
+    "rollup": "0.60.0",
+    "rollup-plugin-babel": "3.0.3",
+    "rollup-plugin-node-resolve": "3.0.0"
   },
   "scripts": {
     "compile": "rollup -c",
