@@ -80,5 +80,13 @@
   },
   "directories": {
     "test": "test"
+  },
+  "renovate": {
+    "extends": [
+      "@ls-age"
+    ],
+    "devDependencies": {
+      "automerge": true
+    }
   }
 }
