@@ -43,7 +43,7 @@
   "homepage": "https://github.com/ls-age/svelte-preprocess-sass#readme",
   "eslintConfig": {
     "parserOptions": {
-      "ecmaVersion": 2017
+      "ecmaVersion": 2018
     },
     "extends": "@ls-age",
     "settings": {
