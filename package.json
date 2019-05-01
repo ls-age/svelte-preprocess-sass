@@ -8,11 +8,12 @@
     "svelte-preprocess-filter": "^1.0.0"
   },
   "devDependencies": {
-    "@ls-age/babel-preset": "0.4.0",
+    "@babel/core": "7.4.4",
+    "@babel/preset-env": "7.4.4",
+    "@babel/register": "7.4.4",
     "@ls-age/bump-version": "0.2.0",
     "@ls-age/eslint-config": "0.9.0",
     "ava": "1.4.1",
-    "babel-core": "6.26.3",
     "codecov": "3.3.0",
     "eslint": "5.16.0",
     "node-sass": "4.12.0",
@@ -58,24 +59,23 @@
   "babel": {
     "presets": [
       [
-        "@ls-age/babel-preset",
+        "@babel/env",
         {
-          "modules": false
+          "targets": {
+            "node": 8
+          }
         }
       ]
     ],
     "env": {
       "test": {
-        "presets": [
-          "@ls-age/babel-preset"
-        ],
         "sourceMaps": "inline"
       }
     }
   },
   "ava": {
     "require": [
-      "babel-core/register"
+      "@babel/register"
     ]
   },
   "directories": {
