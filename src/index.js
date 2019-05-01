@@ -9,7 +9,7 @@ export async function preprocessSass(
 ) {
   if (!filter(Object.assign({ name: 'sass' }, filterOptions), { attributes })) { return null; }
 
-  const { css, map } = await new Promise((resolve, reject) => sassCompiler.render(Object.assign({
+  const { css, map, stats } = await new Promise((resolve, reject) => sassCompiler.render(Object.assign({
     file: filename,
     data: content,
     includePaths: [
@@ -23,7 +23,7 @@ export async function preprocessSass(
     }
   }));
 
-  return { code: css.toString(), map };
+  return { code: css.toString(), map, dependencies: stats.includedFiles };
 }
 
 export function sass(sassOptions, filterOptions) {
