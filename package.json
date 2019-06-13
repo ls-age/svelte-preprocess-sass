@@ -20,7 +20,7 @@
     "nyc": "14.1.1",
     "rollup": "1.15.2",
     "rollup-plugin-babel": "4.3.2",
-    "rollup-plugin-node-resolve": "5.0.1"
+    "rollup-plugin-node-resolve": "5.0.2"
   },
   "scripts": {
     "compile": "rollup -c",
