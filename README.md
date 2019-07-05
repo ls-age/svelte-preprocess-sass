@@ -60,7 +60,7 @@ The `sass` function passes the second argument to [svelte-preprocess-filter](htt
 ```javascript
 ...
 sass(
-  {} // Empty sass options
+  {}, // Empty sass options
   { all: true } // Preprocess all styles
 )
 ```
