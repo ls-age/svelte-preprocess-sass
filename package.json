@@ -13,7 +13,7 @@
     "@babel/register": "7.4.4",
     "@ls-age/bump-version": "0.2.0",
     "@ls-age/eslint-config": "0.9.0",
-    "ava": "2.1.0",
+    "ava": "2.2.0",
     "codecov": "3.5.0",
     "eslint": "5.16.0",
     "node-sass": "4.12.0",
