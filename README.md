@@ -37,7 +37,7 @@ export default {
 Now all `<style>` elements in your components that have a `type="text/sass"` or `lang="sass"` attribute will be preprocessed by sass.
 
 If you are using `type="text/scss"` or `lang="scss"` then you will have to supply
-the `name` option as `scss`.
+the `name` option as `scss`, like `sass({}, { name: 'scss })`.
 
 ### Passing options to sass
 
@@ -70,4 +70,3 @@ the [node-sass](https://github.com/sass/node-sass) documentation.
 
 > If you want to include scss from node_modules, you should supply the `includePaths`
 property in the `options`. i.e. `includePaths: ['src', 'node_modules']`.
-
