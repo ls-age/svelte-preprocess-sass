@@ -15,7 +15,7 @@
     "@ls-age/eslint-config": "0.9.1",
     "ava": "2.3.0",
     "codecov": "3.5.0",
-    "eslint": "5.16.0",
+    "eslint": "6.3.0",
     "node-sass": "4.12.0",
     "nyc": "14.1.1",
     "rollup": "1.20.3",
