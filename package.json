@@ -8,8 +8,8 @@
     "svelte-preprocess-filter": "^1.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.6.2",
-    "@babel/preset-env": "7.6.2",
+    "@babel/core": "7.6.3",
+    "@babel/preset-env": "7.6.3",
     "@babel/register": "7.6.2",
     "@ls-age/bump-version": "0.2.0",
     "@ls-age/eslint-config": "0.9.1",
