@@ -11,7 +11,7 @@
     "@babel/core": "7.6.4",
     "@babel/preset-env": "7.6.3",
     "@babel/register": "7.6.2",
-    "@ls-age/bump-version": "0.2.0",
+    "@ls-age/bump-version": "0.2.1",
     "@ls-age/eslint-config": "0.9.1",
     "ava": "2.4.0",
     "codecov": "3.6.1",
