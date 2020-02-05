@@ -36,8 +36,52 @@ export default {
 
 Now all `<style>` elements in your components that have a `type="text/sass"` or `lang="sass"` attribute will be preprocessed by sass.
 
+```svelte
+<style type="text/sass">
+  $primary: red
+
+  button
+    color: $primary
+</style>
+
+<button on:click>Click me</button>
+```
+
+### Using SCSS
+
 If you are using `type="text/scss"` or `lang="scss"` then you will have to supply
 the `name` option as `scss`, like `sass({}, { name: 'scss' })`.
+
+```js
+// rollup.config.js
+import svelte from 'rollup-plugin-svelte';
+import { sass } from 'svelte-preprocess-sass';
+...
+
+export default {
+  ...
+  plugins: [
+    ...
+    svelte({
+      preprocess: {
+        style: sass({}, { name: 'scss' }),
+      },
+    }),
+  ],
+};
+```
+
+```svelte
+<style type="text/scss">
+  $primary: red;
+
+  button {
+    color: $primary;
+  }
+</style>
+
+<button on:click>Click me</button>
+```
 
 ### Passing options to sass
 
@@ -52,6 +96,32 @@ sass({
 })
 ```
 
+**Common options:**
+
+- Allow imports from *node_modules* via the *includePaths* option:
+
+  ```js
+  import { join } from 'path';
+  import svelte from 'rollup-plugin-svelte';
+  import { sass } from 'svelte-preprocess-sass';
+
+  export default {
+    ...
+    plugins: [
+      ...
+      svelte({
+        preprocess: {
+          style: sass({
+            includePaths: [
+              // Allow imports from 'node_modules'
+              join(__dirname, 'node_modules'),
+            ]
+          }),
+        },
+      }),
+    ],
+  };
+  ```
 
 ### Filtering styles
 
