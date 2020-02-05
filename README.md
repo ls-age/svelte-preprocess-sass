@@ -139,4 +139,6 @@ sass(
 )
 ```
 
+### Creating component libraries
 
+Take a look at the [LukasHechenberger/sample-svelte-scss-lib](https://github.com/LukasHechenberger/sample-svelte-scss-lib) repository for an example of how to create component libraries with extendable styles. (Discussed in [#95](https://github.com/ls-age/svelte-preprocess-sass/issues/95))
