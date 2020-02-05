@@ -49,8 +49,7 @@ Now all `<style>` elements in your components that have a `type="text/sass"` or 
 
 ### Using SCSS
 
-If you are using `type="text/scss"` or `lang="scss"` then you will have to supply
-the `name` option as `scss`, like `sass({}, { name: 'scss' })`.
+If you prefer the non-indented syntax you have to supply the `name` option:
 
 ```js
 // rollup.config.js
@@ -70,6 +69,8 @@ export default {
   ],
 };
 ```
+
+...and use `type="text/scss"` or `lang="scss"` in your components:
 
 ```svelte
 <style type="text/scss">
@@ -123,6 +124,9 @@ sass({
   };
   ```
 
+For available options visit the [sass](http://sass-lang.com/documentation/) and
+the [node-sass](https://github.com/sass/node-sass) documentation.
+
 ### Filtering styles
 
 The `sass` function passes the second argument to [svelte-preprocess-filter](https://github.com/ls-age/svelte-preprocess-filter), e.g.:
@@ -135,8 +139,4 @@ sass(
 )
 ```
 
-For available options visit the [sass](http://sass-lang.com/documentation/) and
-the [node-sass](https://github.com/sass/node-sass) documentation.
 
-> If you want to include scss from node_modules, you should supply the `includePaths`
-property in the `options`. i.e. `includePaths: ['src', 'node_modules']`.
