@@ -7,6 +7,10 @@ export async function preprocessSass(
   filterOptions = {},
   { filename, content, attributes }
 ) {
+  if (filterOptions.name !== 'scss') {
+    if (sassOptions.indentedSyntax === undefined)
+      sassOptions.indentedSyntax = true;
+  }
   if (!filter(Object.assign({ name: 'sass' }, filterOptions), { attributes })) { return null; }
 
   const { css, map, stats } = await new Promise((resolve, reject) => sassCompiler.render({
