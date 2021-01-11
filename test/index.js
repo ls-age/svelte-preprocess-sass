@@ -45,3 +45,8 @@ test('preprocessSass should use indented syntax if set in sassOptions', async t 
   t.is(await preprocess({ lang: 'scss' }, sampleSass, { indentedSyntax: true }), expected);
   t.is(await preprocess({ type: 'text/scss' }, sampleSass, { indentedSyntax: true }), expected);
 });
+
+test('preprocessSass should not detect sass with filterOptions', async t => {
+  t.is(await preprocessSass({}, { name: 'scss' }, { attributes: { lang: 'sass' } }), null);
+  t.is(await preprocessSass({}, { name: 'scss' }, { attributes: { type: 'text/sass' } }), null);
+});
