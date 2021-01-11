@@ -63,11 +63,8 @@ Now all `<style>` elements in your components that have a `type="text/sass"` or 
 <button on:click>Click me</button>
 ```
 
-<details><summary>
-
-**Note: Before version 1, you had to explicitly allow `scss` attributes**
-
-</summary>
+<details>
+<summary>Note: Before version 1, you had to explicitly allow `scss` attributes</summary>
 
 > From the old readme:
 
