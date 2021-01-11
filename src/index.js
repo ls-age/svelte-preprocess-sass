@@ -21,21 +21,24 @@ export async function preprocessSass(
 
   if (!processStyles) return null;
 
-  const { css, map, stats } = await new Promise((resolve, reject) => sassCompiler.render({
-    file: filename,
-    data: content,
-    includePaths: [
-      dirname(filename),
-    ],
-    indentedSyntax,
-    ...sassOptions,
-  }, (err, result) => {
-    if (err) {
-      reject(err);
-    } else {
-      resolve(result);
-    }
-  }));
+  const { css, map, stats } = await new Promise((resolve, reject) =>
+    sassCompiler.render(
+      {
+        file: filename,
+        data: content,
+        includePaths: [dirname(filename)],
+        indentedSyntax,
+        ...sassOptions,
+      },
+      (err, result) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(result);
+        }
+      }
+    )
+  );
 
   return { code: css.toString(), map, dependencies: stats.includedFiles };
 }

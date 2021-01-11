@@ -5,14 +5,8 @@ const dev = process.env.NODE_ENV !== 'production';
 
 export default {
   input: './src/index.js',
-  external: [
-    'path',
-    'node-sass',
-  ],
-  plugins: [
-    resolve(),
-    babel(),
-  ],
+  external: ['path', 'node-sass'],
+  plugins: [resolve(), babel()],
   output: [
     {
       file: './out/index.js',

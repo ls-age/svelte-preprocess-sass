@@ -106,7 +106,7 @@ sass({
 
 **Common options:**
 
-- Allow imports from *node_modules* via the *includePaths* option:
+- Allow imports from _node_modules_ via the _includePaths_ option:
 
   ```js
   import { join } from 'path';
