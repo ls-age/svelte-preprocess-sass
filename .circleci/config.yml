@@ -34,6 +34,10 @@ jobs:
           command: npm run lint -- --format junit --output-file ~/reports/eslint.xml
           when: always
       - run:
+          name: Check code styling
+          command: npm run format -- --check
+          when: always
+      - run:
           name: Running tests
           command: npm run -s test -- --tap | npx tap-xunit > ~/reports/ava.xml
           when: always
