@@ -49,6 +49,25 @@ Now all `<style>` elements in your components that have a `type="text/sass"` or 
 
 ### Using SCSS
 
+...just use `type="text/scss"` or `lang="scss"` in your components:
+
+```svelte
+<style type="text/scss">
+  $primary: red;
+
+  button {
+    color: $primary;
+  }
+</style>
+
+<button on:click>Click me</button>
+```
+
+<details>
+<summary>Note: Before version 1, you had to explicitly allow `scss` attributes</summary>
+
+> From the old readme:
+
 If you prefer the non-indented syntax you have to supply the `name` option:
 
 ```js
@@ -70,19 +89,7 @@ export default {
 };
 ```
 
-...and use `type="text/scss"` or `lang="scss"` in your components:
-
-```svelte
-<style type="text/scss">
-  $primary: red;
-
-  button {
-    color: $primary;
-  }
-</style>
-
-<button on:click>Click me</button>
-```
+</details>
 
 ### Passing options to sass
 

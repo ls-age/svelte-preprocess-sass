@@ -23,7 +23,9 @@
     "rollup-plugin-node-resolve": "5.2.0"
   },
   "scripts": {
+    "build": "npm run -s compile",
     "compile": "rollup -c",
+    "dev": "rollup -cw",
     "lint": "eslint rollup.config.js src test",
     "test": "nyc ava"
   },
