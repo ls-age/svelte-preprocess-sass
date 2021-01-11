@@ -7,7 +7,19 @@ export async function preprocessSass(
   filterOptions = {},
   { filename, content, attributes }
 ) {
-  if (!filter(Object.assign({ name: 'sass' }, filterOptions), { attributes })) { return null; }
+  // Detect if styles should be processed and in we should use sass (indented) syntax.
+  let indentedSyntax;
+  let processStyles;
+
+  if (filterOptions.name === undefined) {
+    indentedSyntax = filter({ name: 'sass', ...filterOptions }, { attributes });
+    processStyles = indentedSyntax || filter({ name: 'scss', ...filterOptions }, { attributes });
+  } else {
+    indentedSyntax = filterOptions.name === 'sass';
+    processStyles = filter(filterOptions, { attributes });
+  }
+
+  if (!processStyles) return null;
 
   const { css, map, stats } = await new Promise((resolve, reject) => sassCompiler.render({
     file: filename,
@@ -15,6 +27,7 @@ export async function preprocessSass(
     includePaths: [
       dirname(filename),
     ],
+    indentedSyntax,
     ...sassOptions,
   }, (err, result) => {
     if (err) {
