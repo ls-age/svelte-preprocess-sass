@@ -31,7 +31,7 @@
     "svelte-preprocess-filter": "^1.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.13.10",
+    "@babel/core": "7.13.13",
     "@babel/preset-env": "7.13.12",
     "@babel/register": "7.13.8",
     "@ls-age/bump-version": "0.2.1",
