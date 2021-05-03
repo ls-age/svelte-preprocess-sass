@@ -37,7 +37,7 @@
     "@ls-age/bump-version": "0.2.1",
     "@ls-age/eslint-config": "0.9.2",
     "ava": "3.15.0",
-    "codecov": "3.8.1",
+    "codecov": "3.8.2",
     "eslint": "7.19.0",
     "eslint-config-prettier": "8.3.0",
     "node-sass": "5.0.0",
