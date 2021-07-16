@@ -1,3 +1,14 @@
+<a name="2.0.1"></a>
+## 2.0.1 (2021-07-16)
+
+
+### Bug Fixes
+
+* **readme:** Update info on available options ([#114](https://github.com/ls-age/svelte-preprocess-sass/issues/114)) ([9c88304](https://github.com/ls-age/svelte-preprocess-sass/commits/9c88304))
+
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0 (2021-07-16)
 
