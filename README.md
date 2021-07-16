@@ -8,7 +8,7 @@
 ## Installation
 
 ```bash
-npm install --save-dev svelte-preprocess-sass node-sass
+npm install --save-dev svelte-preprocess-sass sass
 ```
 
 ## Usage
