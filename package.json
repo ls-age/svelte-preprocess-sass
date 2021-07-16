@@ -18,7 +18,7 @@
     "build": "npm run -s compile",
     "compile": "rollup -c",
     "dev": "rollup -cw",
-    "format": "prettier --ignore-path .gitignore .",
+    "format": "prettier .",
     "lint": "eslint rollup.config.js src test",
     "test": "nyc ava"
   },

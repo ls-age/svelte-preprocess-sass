@@ -132,7 +132,7 @@ sass({
   ```
 
 For available options visit the [sass](http://sass-lang.com/documentation/) and
-the [node-sass](https://github.com/sass/node-sass) documentation.
+[dart-sass](https://github.com/sass/dart-sass#javascript-api) docs.
 
 ### Filtering styles
 
