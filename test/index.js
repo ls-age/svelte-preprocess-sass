@@ -21,8 +21,8 @@ b
   color: $primary`;
 
 const expected = `b {
-  color: red; }
-`;
+  color: red;
+}`;
 
 test('preprocessSass should filter non-sass styles', async (t) => {
   t.is(await preprocessSass({}, {}, { attributes: {} }), null);

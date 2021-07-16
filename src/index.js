@@ -1,5 +1,5 @@
 import { dirname } from 'path';
-import sassCompiler from 'node-sass';
+import sassCompiler from 'sass';
 import { style as filter } from 'svelte-preprocess-filter';
 
 export async function preprocessSass(
