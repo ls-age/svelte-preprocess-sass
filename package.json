@@ -49,7 +49,7 @@
     "rollup": "2.60.1",
     "rollup-plugin-babel": "4.4.0",
     "rollup-plugin-node-resolve": "5.2.0",
-    "sass": "1.43.5"
+    "sass": "1.44.0"
   },
   "ava": {
     "require": [
